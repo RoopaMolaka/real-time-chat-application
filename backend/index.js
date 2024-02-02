@@ -15,8 +15,8 @@ mongoose
   .then(() => {
     console.log(`DB is connected`);
   })
-  .catch(() => {
-    console.log(`DB connection failed`);
+  .catch((err) => {
+    console.log(err, `DB connection failed`);
   });
 
 app.use(
@@ -24,7 +24,6 @@ app.use(
     origin: "*",
   })
 );
-
 
 app.use(express.json());
 
