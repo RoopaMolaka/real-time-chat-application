@@ -18,7 +18,7 @@ import { refreshSidebar, refreshSidebarFun } from "../Features/refreshSidebar";
 // const {io}=require("socket.io-client")
 const theme = createTheme();
 
-const ENDPOINT = "http://localhost:8080";
+const ENDPOINT = "https://fullstack-chat-app-y7gz.onrender.com/";
 var socket, chat;
 
 function ChatArea() {

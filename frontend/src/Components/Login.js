@@ -29,7 +29,10 @@ const Login = () => {
     e.preventDefault();
     console.log("form is subbmitting");
     axios
-      .post("http://localhost:8080/signin", { email, password })
+      .post("https://fullstack-chat-app-y7gz.onrender.com/signin", {
+        email,
+        password,
+      })
       .then((res) => {
         console.log(res);
         setLogInStatus({ msg: "Success", key: Math.random() });

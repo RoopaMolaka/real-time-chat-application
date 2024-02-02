@@ -34,7 +34,11 @@ const Signup = () => {
     e.preventDefault();
     console.log("form is subbmitting");
     axios
-      .post("http://localhost:8080/signup", { name, email, password })
+      .post("https://fullstack-chat-app-y7gz.onrender.com/signup", {
+        name,
+        email,
+        password,
+      })
       .then((res) => {
         console.log(res);
         setSignInStatus({ msg: "success", key: Math.random() });

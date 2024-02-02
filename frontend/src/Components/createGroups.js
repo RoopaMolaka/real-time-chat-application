@@ -53,7 +53,7 @@ function CreateGroups() {
 
     axios
       .post(
-        "http://localhost:8080/chat/createGroup",
+        "https://fullstack-chat-app-y7gz.onrender.com/chat/createGroup",
         {
           name: groupName,
           users: JSON.stringify(selectedUserIds),

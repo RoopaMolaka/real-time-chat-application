@@ -34,18 +34,31 @@ let userSignup = expressAsyncHandler(async (req, res) => {
     throw Error("All necessary input fields have not been filled");
   }
 
-  const userExist = await User.findOne({ email });
+  const userExist = await User.findOne( {email} );
   if (userExist) {
     throw new Error("User already Exists");
   }
 
-  const userNameExist = await User.findOne({ name });
+  const userNameExist = await User.findOne({ name} );
   if (userNameExist) {
     throw new Error("UserName already taken");
   }
 
   const user = await User.create({ name, email, password });
-  if (user) {
+  // if (user) {
+  //   res.status(201).json({
+  //     _id: user._id,
+  //     name: user.name,
+  //     email: user.email,
+
+  //     token: generateToken(user._id),
+  //   });
+  // } else {
+  //   res.status(400);
+  //   throw new Error("Registration Error");
+  // }
+
+  try {
     res.status(201).json({
       _id: user._id,
       name: user.name,
@@ -53,9 +66,9 @@ let userSignup = expressAsyncHandler(async (req, res) => {
 
       token: generateToken(user._id),
     });
-  } else {
+  } catch (e) {
     res.status(400);
-    throw new Error("Registration Error");
+      throw new Error("Registration Error");
   }
 });
 
