@@ -50,7 +50,7 @@ const Sidebar = () => {
       },
     };
 
-    axios.get("http://localhost:8080/chat/", config).then((response) => {
+    axios.get("https://fullstack-chat-app-y7gz.onrender.com/chat/", config).then((response) => {
       console.log("Data refresh in sidebar ");
       setChats(response?.data);
       // setRefresh(!refresh);
