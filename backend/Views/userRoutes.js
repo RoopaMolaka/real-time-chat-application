@@ -7,7 +7,7 @@ const {
   userSignin,
   fetchAllUsersController,
 } = require("../Controller/userController");
-const bcrypt = require("bcrypt");
+
 const { body, validationResult } = require("express-validator");
 const { protect } = require("../middleware/authMiddleware");
 
