@@ -9,9 +9,9 @@ const chatRoutes = require("./Views/chatRoutes");
 const messageRoutes = require("./Views/msgRoutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const { Socket } = require("socket.io");
-
+dotenv.config();
 mongoose
-  .connect("mongodb://127.0.0.1:27017")
+  .connect(process.env.MONGO_URL)
   .then(() => {
     console.log(`DB is connected`);
   })
@@ -24,7 +24,7 @@ app.use(
     origin: "*",
   })
 );
-dotenv.config();
+
 
 app.use(express.json());
 
