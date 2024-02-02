@@ -33,7 +33,7 @@ function Users() {
         Authorization: `Bearer ${userInfo?.token}`,
       },
     };
-    axios.get("http://localhost:8080/fetchUsers", config).then((data) => {
+    axios.get("https://fullstack-chat-app-y7gz.onrender.com/fetchUsers", config).then((data) => {
       console.log("UData refreshed in Users panel ");
       setUsers(data.data);
       // setRefresh(!refresh);
@@ -85,7 +85,7 @@ function Users() {
                       },
                     };
                     axios.post(
-                      "http://localhost:8080/chat/",
+                      "https://fullstack-chat-app-y7gz.onrender.com/chat/",
                       {
                         userId: user._id,
                       },

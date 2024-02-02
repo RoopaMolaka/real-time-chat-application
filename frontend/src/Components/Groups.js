@@ -38,7 +38,7 @@ function Groups() {
     };
 
     axios
-      .get("http://localhost:8080/chat/fetchGroups", config)
+      .get("https://fullstack-chat-app-y7gz.onrender.com/chat/fetchGroups", config)
       .then((response) => {
         console.log("Group Data from API ");
         SetGroups(response.data);
@@ -90,7 +90,7 @@ function Groups() {
                       },
                     };
                     axios.put(
-                      "http://localhost:8080/chat/addSelfToGroup",
+                      "https://fullstack-chat-app-y7gz.onrender.com/chat/addSelfToGroup",
                       {
                         chatId: group._id,
                         userId: userInfo._id,

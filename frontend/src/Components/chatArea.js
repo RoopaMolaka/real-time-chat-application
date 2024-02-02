@@ -47,7 +47,7 @@ function ChatArea() {
     };
     axios
       .post(
-        "http://localhost:8080/message/",
+        "https://fullstack-chat-app-y7gz.onrender.com/message/",
         {
           content: messageContent,
           chatId: chat_id,
@@ -90,7 +90,7 @@ function ChatArea() {
       },
     };
     axios
-      .get("http://localhost:8080/message/" + chat_id, config)
+      .get("https://fullstack-chat-app-y7gz.onrender.com/message/" + chat_id, config)
       .then(({ data }) => {
         setAllMessages(data);
         setloaded(true);

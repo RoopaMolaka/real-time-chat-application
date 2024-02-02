@@ -88,21 +88,7 @@ const Signup = () => {
           </InputRightElement>
         </InputGroup>
       </FormControl>
-      {/* <FormControl id='Password' isRequired>
-              <FormLabel>Confirm Password</FormLabel>
-              <InputGroup>
-                   <Input
-                      type={show ? "text" : 'password'}
-                  placeholder='Enter your Password'
-                  onChange={(e)=>{SetConfirmPassword(e.target.value)}}
-                  />
-                  <InputRightElement width="4.5rem">
-                      <Button h="1.75rem" size="sm" onClick={handleClick}>
-                          {show ? "Hide":"Show"}
-                      </Button>
-                  </InputRightElement>
-              </InputGroup>
-          </FormControl> */}
+     
       <Button
         colorScheme="blue"
         width="100%"
