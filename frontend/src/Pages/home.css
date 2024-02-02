@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Bungee+Spice&family=EB+Garamond&family=Playfair+Display:ital@1&family=Raleway:ital,wght@1,100&family=Rubik+Maps&family=Whisper&family=Young+Serif&display=swap');
+
+
+#text-style {
+    text-align: center;
+    text-shadow: 5px 5px 5px #33333333;
+    background-image: linear-gradient(180deg, rgb(243, 14, 193), rgb(9, 213, 165));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+
+}
+
+.home-style {
+    min-height: 100vh;
+    background-image: linear-gradient(180deg, rgb(30, 117, 203), rgb(34, 44, 48));
+    min-width: 100vw;
+
+}

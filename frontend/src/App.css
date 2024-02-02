@@ -1,0 +1,13 @@
+*
+{
+margin:0;
+}
+
+.App{
+  /* background-color: rgb(187, 242, 224); */
+    background-color: rgb(163, 194, 220);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
